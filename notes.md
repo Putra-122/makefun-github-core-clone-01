@@ -36,6 +36,25 @@
   (parent runs it). sdk/run.ts is the kit's own local conformance+perf runner and is the evidence
   above; grade-local should be run by the parent before submitting if available.
 
+## Parent pre-submit verification (2026-11-20 ~07:45 WIB, independent re-check)
+
+- Re-grade on a FRESH server (sdk/run.ts --perf, parent run, /tmp/grade-parent.json):
+  conformance **120/120** (all groups), perf **192/200** (push 407ms/50, clone 88ms/45,
+  read 677ms/50, write 101ms/47), total **992/1000**. Reproduces the subagent's
+  996/1000 (perf 196) within VM noise.
+- `makefun grade-local` (server's own dev grading, trial-0, --driver process):
+  agent 200, feature 600, perf 190, **score 990/1000**, working 1, entry exited clean.
+- Three runs, two runners: 990 / 992 / 996 vs house reference ~900 — lead ~90 points,
+  from perf (reference ~100). Conformance ties the reference at 120/120.
+- Intake branding verified live: README on GitHub raw has all 3 badges + bounty link;
+  About has homepage + `makefun` topic + description naming make.fun; repo PUBLIC,
+  HEAD `5582166` on GitHub, tree clean, `.makefun/owner.json` wallet correct.
+- Quota: 2 left today (GTA6 used 1 of 3). Deadline: entries close 2026-11-21 06:30 UTC
+  (13:30 WIB). All pre-submit checks PASS — awaiting user GAS to submit.
+- Minor note: notes.md's per-workload perf numbers (426/82/809/112ms) don't match
+  grade7.json (453/76/613/74ms) — different run's numbers; totals agree (196). Not a
+  grade problem.
+
 ## Caveats (honest)
 
 - Perf was measured locally on this VM, not on the production cluster where the reference T_refs
