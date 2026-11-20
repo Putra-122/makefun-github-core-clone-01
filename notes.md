@@ -10,7 +10,8 @@
 
 ## Entry
 
-- Repo: https://github.com/Putra-122/makefun-github-core-clone-01
+- Repo: https://github.com/Putra-122/makefun-github-core-clone-01 (public, main)
+- Entry commit: `e4134e9a56fe24dd53bd5d7d56c81a64e00c64f3` (first commit; notes updated in a second commit)
 - Stack: one Node 22 process, stdlib only, no git binary, no outside service, in-memory store.
   `main.ts` (lifecycle, as shipped) + `app.ts` (the forge, ~131 KB).
 - Surface: git smart HTTP (upload-pack v2 ls-refs/fetch, receive-pack v0 report-status + sideband),
