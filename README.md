@@ -4,7 +4,7 @@
 [![rank](https://make.fun/badge/github-core-clone-01/Putra-122/makefun-github-core-clone-01/rank.svg)](https://make.fun/bounty/github-core-clone-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=github-core-clone-01)
 [![reward](https://make.fun/badge/github-core-clone-01/Putra-122/makefun-github-core-clone-01/reward.svg)](https://make.fun/bounty/github-core-clone-01?utm_source=github&utm_medium=readme&utm_campaign=github-core-clone-01)
 
-A standalone GitHub-compatible git forge in one Node 22 process (stdlib only, no git binary, no outside service): git smart HTTP (upload-pack v2 with ls-refs/fetch, receive-pack v0 with report-status + sideband), REST v3 under /api/v3, GraphQL v4 at /api/graphql, and MCP at /mcp. In-memory store, deterministic fixed timestamps, SHA-1 objects, plain packfiles. Local grade: 120/120 conformance, 996/1000 total (feature 600 + agent-native 200 + performance 196).
+A standalone GitHub-compatible git forge: git smart HTTP (upload-pack v2 + receive-pack v0), REST v3, GraphQL v4 and MCP, in one Node process with no dependencies. In-memory, stdlib only.
 
 ## Run it
 
